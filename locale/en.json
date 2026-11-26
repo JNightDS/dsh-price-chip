@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Peak/off-peak price chip",
+    "description": "A DeepSeek billing chip in a floating card or the sidebar: current peak/off-peak multiplier, countdown to the next price switch, live unit prices and account balance, with horizontal and vertical layouts."
+  }
+}

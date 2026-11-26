@@ -1,0 +1,59 @@
+{
+  "name": "dsh-price-chip",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 峰谷价签：悬浮窗或侧边栏里显示当前峰谷倍率、切价倒计时、实时单价与账户余额。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "deepseek",
+    "pricing",
+    "token-cost",
+    "peak-offpeak",
+    "billing"
+  ],
+  "author": "挽歌JNightDS (JNightDS)",
+  "homepage": "https://github.com/JNightDS/dsh-price-chip#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JNightDS/dsh-price-chip.git"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "license": "MIT"
+}

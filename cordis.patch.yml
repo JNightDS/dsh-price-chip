@@ -1,0 +1,16 @@
+- insert:
+    - id: price-chip
+      name: 'dsh-price-chip'
+      # 可选配置：改完重启 Harness 生效（不写则用默认值）
+      config:
+        defaultMode: floating     # floating | sidebar
+        defaultLayout: horizontal # horizontal | vertical
+        pinnedByDefault: false
+        refreshSeconds: 60
+        apiKeyRef: DEEPSEEK_API_KEY
+        baseURL: https://api.deepseek.com
+        priceSync: true           # 启动时从官方价格页同步一次
+        priceUrl: https://api-docs.deepseek.com/zh-cn/quick_start/pricing/
+        holidaySync: true         # 启动时按年拉取节假日/调休表
+        holidayUrl: https://cdn.jsdelivr.net/gh/NateScarlet/holiday-cn@master/{year}.json
+        calendarWarnDays: 45      # 剩余天数低于该值时提醒模型补下一年
